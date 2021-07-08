@@ -1,7 +1,8 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
--(-class Category {
+@Entity("categories")
+class Category {
   @PrimaryColumn()
   id?: string;
 
@@ -19,6 +20,6 @@ import { v4 as uuidV4 } from "uuid";
       this.id = uuidV4();
     }
   }
-});
+}
 
 export { Category };
